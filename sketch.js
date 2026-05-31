@@ -27,8 +27,8 @@ function windowResized() {
 }
 
 function setup(){
-  //createCanvas(400, 400);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(400, 400);
+  //createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
   userStartAudio(); 
   if (!bgm.isPlaying()) {
