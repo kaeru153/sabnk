@@ -2,7 +2,7 @@ let bgm;
 let press;
 let dull;
 let entities=[];
-let entitie_count=15;
+let entitie_count=8;
 let kimo_img;
 let bon=44;
 
@@ -12,7 +12,7 @@ let click_count=0;
 let is_fre=false;
 
 let drops=[];
-let drop_count=30;
+let drop_count=50;
 let wind_force=4;
 let base_length=10;
 function preload(){
@@ -31,7 +31,7 @@ function setup(){
   createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
   kimo_img.resize(300, 0); 
-  sank_img.resize(150, 0);
+  sank_img.resize(200, 0);
   userStartAudio(); 
   if (!bgm.isPlaying()) {
     bgm.loop();
@@ -68,7 +68,7 @@ function draw(){
   if (random() < 0.002){
     background(0,0,0); 
   }
-  let interval=100;
+  let interval=200;
   let offset =frameCount%interval;
   tint(0,0,50);
   //はいけい
@@ -79,7 +79,7 @@ function draw(){
       translate(x+offset,y+offset);
       rotate(frameCount *1.2);
       //image(sank_img,x+offset,y+offset,100,100);
-      image(sank_img,0,0,100,100);
+      image(sank_img,0,0,200,200);
       pop();
     }
   }
