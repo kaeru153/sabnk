@@ -15,6 +15,10 @@ let drops=[];
 let drop_count=50;
 let wind_force=4;
 let base_length=10;
+
+let sc_ofs=0;
+let sc_spe=2;
+let max_bon=88;
 function preload(){
   kimo_img=loadImage('kkiki.png');
   sank_img=loadImage('sabnk.png');
@@ -100,8 +104,8 @@ function draw(){
     }
   }
   noStroke();
-  
-  for (let i=0;i<entities.length;i++){
+  if (is_fre===true)sc_ofs=sc_ofs+sc_spe;
+  for(let i=0;i<entities.length;i++){
     let e=entities[i];
     let x,y;
     if(is_fre){
@@ -115,7 +119,7 @@ function draw(){
           y=height*0.8;
       }
       loop_width=width+300;
-      x=((floor(i/3)*180+frameCount*2)%loop_width)-100;
+      x=((floor(i/3)*180+sc_ofs)%loop_width)-100;
       e.angle=frameCount;
     }else{
       x=map(noise(e.tx),0.2,0.8,0,width);
@@ -155,8 +159,21 @@ function draw(){
 
 
 
-function mousePressed() {
-  if(is_fre)return;
+function mousePressed(){
+if (is_fre===true){
+    sc_spe+=1;
+    click_count+=1;
+    press.play();
+    if(click_count>=max_bon){
+      is_fre=false;
+      click_count=0;
+      scroll_speed=2;
+      ms_x=0.0010;
+      ms_y=0.0025;
+      dull.play();
+    }
+    return false;
+  }
   userStartAudio(); 
   ms_x+=0.001;
   ms_y+=0.001;
