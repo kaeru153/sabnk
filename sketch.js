@@ -4,7 +4,7 @@ let dull;
 let entities=[];
 let entitie_count=15;
 let kimo_img;
-let bon=44;
+let bon=55;
 
 let ms_x=0.0010;
 let ms_y=0.0025;
@@ -18,7 +18,7 @@ let base_length=10;
 
 let sc_ofs=0;
 let sc_spe=2;
-let max_bon=88;
+let max_bon=110;
 function preload(){
   kimo_img=loadImage('kkiki.png');
   sank_img=loadImage('sabnk.png');
