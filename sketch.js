@@ -2,7 +2,7 @@ let bgm;
 let press;
 let dull;
 let entities=[];
-let entitie_count=8;
+let entitie_count=15;
 let kimo_img;
 let bon=44;
 
@@ -115,7 +115,7 @@ function draw(){
           y=height*0.8;
       }
       loop_width=width+300;
-      x=((floor(i/3)*130+frameCount*2)%loop_width)-100;
+      x=((floor(i/3)*180+frameCount*2)%loop_width)-100;
       e.angle=frameCount;
     }else{
       x=map(noise(e.tx),0.2,0.8,0,width);
