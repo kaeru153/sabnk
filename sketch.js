@@ -2,7 +2,7 @@ let bgm;
 let press;
 let dull;
 let entities=[];
-let entitie_count=7;
+let entitie_count=15;
 let kimo_img;
 let bon=44;
 
@@ -12,7 +12,7 @@ let click_count=0;
 let is_fre=false;
 
 let drops=[];
-let drop_count=15;
+let drop_count=30;
 let wind_force=4;
 let base_length=10;
 function preload(){
@@ -63,7 +63,7 @@ function setup(){
 }
 
 function draw(){
-  fill(255,20,20, 30);
+  fill(255,20,20, 3);
   rect(0,0,width,height);
   if (random() < 0.002){
     background(0,0,0); 
