@@ -27,9 +27,11 @@ function windowResized() {
 }
 
 function setup(){
-  createCanvas(400, 400);
-  //createCanvas(windowWidth, windowHeight);
+  //createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
+  kimo_img.resize(300, 0); 
+  sank_img.resize(150, 0);
   userStartAudio(); 
   if (!bgm.isPlaying()) {
     bgm.loop();
@@ -61,7 +63,7 @@ function setup(){
 }
 
 function draw(){
-  fill(255,20,20, 0.3);
+  fill(255,20,20, 30);
   rect(0,0,width,height);
   if (random() < 0.002){
     background(0,0,0); 
