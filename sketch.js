@@ -139,7 +139,7 @@ function draw(){
   }
     push();
     rectMode(CENTER);
-    if (random()>0.6){
+    if (random()>0.3){
        fill(0,0,100,random(50,150));
         let noise_x=random(0,width);
         let noise_y=random(0,height);
