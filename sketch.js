@@ -2,7 +2,7 @@ let bgm;
 let press;
 let dull;
 let entities=[];
-let entitie_count=15;
+let entitie_count=7;
 let kimo_img;
 let bon=44;
 
@@ -12,7 +12,7 @@ let click_count=0;
 let is_fre=false;
 
 let drops=[];
-let drop_count=30;
+let drop_count=15;
 let wind_force=4;
 let base_length=10;
 function preload(){
