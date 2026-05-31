@@ -29,6 +29,7 @@ function windowResized() {
 function setup(){
   //createCanvas(400, 400);
   createCanvas(windowWidth, windowHeight);
+  pixelDensity(1);
   userStartAudio(); 
   if (!bgm.isPlaying()) {
     bgm.loop();
@@ -166,4 +167,5 @@ function mousePressed() {
   if(!bgm.isPlaying()){
     bgm.loop();
   }
+  return false;
 }
